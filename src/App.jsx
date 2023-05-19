@@ -11,6 +11,9 @@ import Weather from './components/weather';
 import Pokemon from './components/pokemon';
 import City from './components/city';
 import Computer from './components/Computer';
+import Buttom from './components/Buttom';
+import Barber from './components/Barber';
+import Bakery from './components/bakery';
 import './App.css';
 
 function App() {
@@ -21,13 +24,14 @@ function App() {
     rain: require('./images/anna-atkins-rNBaaxyeWWM-unsplash.jpg'),
     pikachu: require('./images/mikel-N7OocKwsJ0s-unsplash.jpg'),
     bogota: require('./images/random-institute-GkacI-_mGlg-unsplash.jpg'),
-    pc: require('./images/andre-tan-8yesL5ZPjIU-unsplash.jpg')
+    pc: require('./images/andre-tan-8yesL5ZPjIU-unsplash.jpg'),
+    barber: require('./images/allef-vinicius-IvQeAVeJULw-unsplash.jpg')
   };
   const size = {
     glass:{width: '10%', height: '10%'},
     restaurnt:{width:'13%', height:'13%'},
     sofware:{width:'50%', height:'50%'},
-    bogota:{width:'80%', height:'60%', padingTop:'5%',paddingBottom:'10%'},
+    bogota:{width: '54%',height: '50%',paddingBottom:'10%',paddingTop: '2%'},
     pc:{height:'77%', width:'30%'}
   }/**Product */
   const number1 = 1512;/** Calculator*/
@@ -69,7 +73,11 @@ function App() {
 
       <Computer price='3.600.000' description={pcDescription} image={photo.pc} style={size.pc}/>   
 
-    
+      <Buttom style='red' buttonName='Carro' nombre='CLASS GLA 35 AMG' link='https://alemautos.com.co/vehiculos/todos-los-modelos/suvs/gla-35-amg' />
+
+      <Barber style={size.restaurnt} name='Torres cuts' address='Unicentro' price='15.000' price2='20.000' price3='40.000' logo={photo.barber} />
+
+      <Bakery toast='avocado toast' coffee='capuchino' milkshake='chocolate' bread='Coco bread'/>
     </div>
   );
 }
