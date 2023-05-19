@@ -62,6 +62,55 @@
   background-color: #0056b3;
 }
 
+.target{
+  border: solid 2px black;
+  margin-left: 30%;
+  margin-right: 30%;
+  overflow: hidden;
+}
+
+.appHeader{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding-left: 10%;
+  padding-right: 10%;
+}
+
+.appBody{
+  display: flex;
+  justify-content: space-between;
+}
+
+.appLeft{
+  padding-left: 8%;
+}
+
+.appRight{
+  width: 40%;
+  padding-right: 30%;
+}
+
+.appLogo{
+  color: #0056b3;
+}
+
+ul{
+  list-style: none;
+}
+
+.city{
+  display: flex;
+  margin-bottom: -16%;
+}
+
+.pcSell{
+  display: flex;
+  align-items: center;  
+  justify-content: center;
+  padding-left: 18%;
+}
+
 .App-logo {
   height: 40vmin;
   pointer-events: none;

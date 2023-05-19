@@ -1,30 +1,51 @@
-import Name from './components/1Name';
-import Product from './components/2Product';
-import Calculator from './components/3Calcu';
-import ContactForm from './components/4form';
-import Age from './components/5age';
-import Grade from './components/6';
+import Name from './components/Name';
+import Product from './components/Product';
+import Calculator from './components/Calcu';
+import ContactForm from './components/Form';
+import Age from './components/Age';
+import Grade from './components/Grade';
+import Menu from './components/Menu';
+import ProfessionalCard from './components/Target';
+import SocialMedia from './components/Social';
+import Weather from './components/weather';
+import Pokemon from './components/pokemon';
+import City from './components/city';
+import Computer from './components/Computer';
 import './App.css';
 
 function App() {
-  const glassImage = {img: require('./images/glass.jpg')};/**Product */
-  const size = {width: '10%', height: '10%'}/**Product */
+  const photo = {
+    glass: require('./images/glass.jpg'),
+    restaurnt: require('./images/restaurant.jpg'),
+    sofware: require('./images/clement-helardot-95YRwf6CNw8-unsplash.jpg'),
+    rain: require('./images/anna-atkins-rNBaaxyeWWM-unsplash.jpg'),
+    pikachu: require('./images/mikel-N7OocKwsJ0s-unsplash.jpg'),
+    bogota: require('./images/random-institute-GkacI-_mGlg-unsplash.jpg'),
+    pc: require('./images/andre-tan-8yesL5ZPjIU-unsplash.jpg')
+  };
+  const size = {
+    glass:{width: '10%', height: '10%'},
+    restaurnt:{width:'13%', height:'13%'},
+    sofware:{width:'50%', height:'50%'},
+    bogota:{width:'80%', height:'60%', padingTop:'5%',paddingBottom:'10%'},
+    pc:{height:'77%', width:'30%'}
+  }/**Product */
   const number1 = 1512;/** Calculator*/
   const number2 = 23165;/** Calculator*/
   const age = 18;/**Age*/
   const futureAge = age + 10;/**Age */
-  const grade = [3.5, 2.4, 4.8 ];/**Grade */
-  let result = 0;
-    for(let i = 0;  i < grade.length; i +=1){
-      result += i;
-      return result;
-    }
+  const grade1 = 4.5;/**Grade */
+  const grade2 = 3.3;/**Grade */
+  const grade3 = 2.2;/**Grade */
+  const finalGrade = (grade1+grade2+grade3)/3;/**Grade */
+  const description = 'Bogotá is the capital of Colombia and one of the largest cities in South America. Located in the center of the country, it sits at an altitude of approximately 2,640 meters above sea level, making it one of the highest capitals in the world.'
+  const pcDescription = 'This pc have 16 gb of ram and an ryzen 5 3400G with 6 fans a m2 disk of 1tb with a power supply unit Gold certificate'
 
   return (
     <div className="App">
       <Name name='Mauro' phoneNumber='3234366000' />
 
-      <Product style={size} image={glassImage.img} name='Glasses' price='250.000'/>
+      <Product style={size.glass} image={photo.glass} name='Glasses' price='250.000'/>
 
       <Calculator number1={number1} operator='+' number2={number2} operator2='=' result={number1+number2} />
 
@@ -32,8 +53,23 @@ function App() {
 
       <Age name='martin' age={age} futureAge={futureAge}/>
 
-      <Grade student='Isabel' grade1={grade(0)} grade2={grade(1)} grade3={grade(2)} finalGrade={result} />
+      <Grade student='Isabel' grade1={grade1} grade2={grade2} grade3={grade3} finalGrade={finalGrade} />
 
+      <Menu style={size.restaurnt} restaurantName='The best restaurant' logo={photo.restaurnt} mainCourse='steamed vegetables' soup='Tomatoe soup' dessert='oreo cake' protein='fried chicken'/>
+
+      <ProfessionalCard companyName="Tugor's corp" worker='Andres Celis' profession='Software developer' phoneNumber='3234366000'/>
+      
+      <SocialMedia style={size.sofware} name='Sandra' image={photo.sofware}/>
+
+      <Weather climate='RAIN' image={photo.rain} style={size.restaurnt} temperature='26°'/>
+
+      <Pokemon name='pikachu' power='50+' life='basic' image={photo.pikachu} style={size.restaurnt} />
+
+      <City city='Bogota' description={description} map={photo.bogota} style={size.bogota}/>   
+
+      <Computer price='3.600.000' description={pcDescription} image={photo.pc} style={size.pc}/>   
+
+    
     </div>
   );
 }
