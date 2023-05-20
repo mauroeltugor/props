@@ -4,7 +4,8 @@ const Soldier = ({idBattalion,cantSoldiers,sedeName}) => {
             <h1>{sedeName}</h1>
             <h4>{idBattalion}</h4>
             <br />
-            <h2></h2>
+            <h2>{cantSoldiers}</h2>
+            <hr />
         </div>
     )
 }

@@ -14,6 +14,8 @@ import Computer from './components/Computer';
 import Buttom from './components/Buttom';
 import Barber from './components/Barber';
 import Bakery from './components/bakery';
+import Soldier from './components/Soldiers';
+import Gallery from './components/Gallery';
 import './App.css';
 
 function App() {
@@ -25,7 +27,8 @@ function App() {
     pikachu: require('./images/mikel-N7OocKwsJ0s-unsplash.jpg'),
     bogota: require('./images/random-institute-GkacI-_mGlg-unsplash.jpg'),
     pc: require('./images/andre-tan-8yesL5ZPjIU-unsplash.jpg'),
-    barber: require('./images/allef-vinicius-IvQeAVeJULw-unsplash.jpg')
+    barber: require('./images/allef-vinicius-IvQeAVeJULw-unsplash.jpg'),
+    soldier: require('./images/sander-sammy-kcwkT7mc0fU-unsplash.jpg')
   };
   const size = {
     glass:{width: '10%', height: '10%'},
@@ -78,6 +81,10 @@ function App() {
       <Barber style={size.restaurnt} name='Torres cuts' address='Unicentro' price='15.000' price2='20.000' price3='40.000' logo={photo.barber} />
 
       <Bakery toast='avocado toast' coffee='capuchino' milkshake='chocolate' bread='Coco bread'/>
+
+      <Soldier sedeName='great elemental unit' idBattalion='55452553365' cantSoldiers='2.5000'/>
+
+      <Gallery style={size.restaurnt} image1={photo.barber} image2={photo.barber} image3={photo.barber} image4={photo.barber} image5={photo.barber} image6={photo.barber} image7={photo.barber} image8={photo.barber} image9={photo.barber}/>
     </div>
   );
 }
