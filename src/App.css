@@ -111,6 +111,35 @@ ul{
   padding-left: 18%;
 }
 
+.boxSize{
+  width: 35%;
+}
+
+.soccer{
+  width: 40%;
+  height: 40%;
+  overflow: hidden;
+}
+
+
+.vaper{
+  display: flex;
+  align-items: center;
+  padding-left: 30%;
+}
+
+.infoProblems{
+  width: 40%;
+}
+
+.naruto{
+  display: flex;
+  padding-left: 10%;
+}
+
+
+
+
 .App-logo {
   height: 40vmin;
   pointer-events: none;

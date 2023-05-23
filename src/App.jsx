@@ -7,9 +7,9 @@ import Grade from './components/Grade';
 import Menu from './components/Menu';
 import ProfessionalCard from './components/Target';
 import SocialMedia from './components/Social';
-import Weather from './components/Weather';
-import Pokemon from './components/Pokemon';
-import City from './components/City';
+import Weather from './components/weather';
+import Pokemon from './components/pokemon';
+import City from './components/city';
 import Computer from './components/Computer';
 import Buttom from './components/Buttom';
 import Barber from './components/Barber';
@@ -17,6 +17,12 @@ import Bakery from './components/bakery';
 import Soldier from './components/Soldiers';
 import Gallery from './components/Gallery';
 import HotelReser from './components/Hotel';
+import Music from './components/Music';
+import Field from './components/SoccerField';
+import Vape from './components/vapeStore';
+import Cv from './components/Cv';
+import Kages from './components/Naruto';
+import Moons from './components/Moon';
 import './App.css';
 
 function App() {
@@ -29,8 +35,23 @@ function App() {
     bogota: require('./images/random-institute-GkacI-_mGlg-unsplash.jpg'),
     pc: require('./images/andre-tan-8yesL5ZPjIU-unsplash.jpg'),
     barber: require('./images/allef-vinicius-IvQeAVeJULw-unsplash.jpg'),
-    soldier: require('./images/sander-sammy-kcwkT7mc0fU-unsplash.jpg')
+    soldier: require('./images/sander-sammy-kcwkT7mc0fU-unsplash.jpg'),
+    eladio: require('./images/3men2.jfif'),
+    tiger: require('./images/tigers.png'),
+    tapita:require('./images/tapita.jpg'),
+    onion: require('./images/onion.jfif'),
+    vape: require('./images/vape.jfif'),
+    developer: require('./images/FOTO-MAURICIO-CELIS.jpg')
   };
+
+  const kages = {
+    hokage: require('./images/hoka.jfif'),
+    tsuchikage: require('./images/tsu.jfif'),
+    kazekage: require('./images/kaze.jfif'),
+    raikage: require('./images/raika.jfif'),
+    mizukage: require('./images/mizu.jfif')
+  }
+
   const cars = {
     car1: require('./images/auto-fan-NnFFIKITNyQ-unsplash.jpg'),
     car2: require('./images/aaron-huber-8qYE6LGHW-c-unsplash.jpg'),
@@ -43,12 +64,23 @@ function App() {
     car9: require('./images/toni-zaat-bKqNW5Dq6p8-unsplash.jpg')
   }
 
+  const moon = {
+    moon1: require('./images/kokushibo.jfif'),
+    moon2: require('./images/Doma.jfif'),
+    moon3: require('./images/Akaza.jfif'),
+    moon4: require('./images/hantengu.jfif'),
+    moon5: require('./images/Gyokko.jfif'),
+    moon6: require('./images/gyutaro.jfif')
+  }
+
   const size = {
     glass:{width: '10%', height: '10%'},
     restaurnt:{width:'13%', height:'13%'},
     sofware:{width:'50%', height:'50%'},
     bogota:{width: '54%',height: '50%',paddingBottom:'10%',paddingTop: '2%'},
-    pc:{height:'77%', width:'30%'}
+    pc:{height:'77%', width:'30%'},
+    field:{display:'flex',textAlign:'center',alignItems:'center',justifyContent:'space-between', padding:'0 20%'},
+    naruto:{width:'53%'}
   }/**Product */
   const number1 = 1512;/** Calculator*/
   const number2 = 23165;/** Calculator*/
@@ -101,6 +133,17 @@ function App() {
     
       <HotelReser nameReserv='Pancho Perez' rooms='3 rooms' people='6 people' days='5 days'/>
 
+      <Music style={size.restaurnt} logo={photo.eladio} name='Si La Calle Llama (Remix)(Con Myke Towers)' duration='4:00'/>
+
+      <Field style={size.field} idCancha1='1' idCancha2='2' idCancha3='3' hora1='14:30' hora2='9:00' hora3='9:15' team1='The tigers' team2='Tapitas FC' team3='thousand onion' logo1={photo.tiger} logo2={photo.tapita} logo3={photo.onion}/>
+
+      <Vape image={photo.vape} style={size.bogota}/>
+
+      <Cv photo={photo.developer} fullName='Andres Mauricio Celis Reyes' style={size.restaurnt}/>
+
+      <Kages hokage={kages.hokage} kazekage={kages.kazekage} mizukage={kages.mizukage} tsuchikage={kages.tsuchikage} raikage={kages.raikage} style={size.naruto}  />
+
+      <Moons moon1={moon.moon1} moon2={moon.moon2} moon3={moon.moon3} moon4={moon.moon4} moon5={moon.moon5} moon6={moon.moon6}  />
     </div>
   );
 }
