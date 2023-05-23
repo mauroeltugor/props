@@ -7,15 +7,16 @@ import Grade from './components/Grade';
 import Menu from './components/Menu';
 import ProfessionalCard from './components/Target';
 import SocialMedia from './components/Social';
-import Weather from './components/weather';
-import Pokemon from './components/pokemon';
-import City from './components/city';
+import Weather from './components/Weather';
+import Pokemon from './components/Pokemon';
+import City from './components/City';
 import Computer from './components/Computer';
 import Buttom from './components/Buttom';
 import Barber from './components/Barber';
 import Bakery from './components/bakery';
 import Soldier from './components/Soldiers';
 import Gallery from './components/Gallery';
+import HotelReser from './components/Hotel';
 import './App.css';
 
 function App() {
@@ -30,6 +31,18 @@ function App() {
     barber: require('./images/allef-vinicius-IvQeAVeJULw-unsplash.jpg'),
     soldier: require('./images/sander-sammy-kcwkT7mc0fU-unsplash.jpg')
   };
+  const cars = {
+    car1: require('./images/auto-fan-NnFFIKITNyQ-unsplash.jpg'),
+    car2: require('./images/aaron-huber-8qYE6LGHW-c-unsplash.jpg'),
+    car3: require('./images/devon-janse-van-rensburg-yoqHLUayUTg-unsplash.jpg'),
+    car4: require('./images/dhiva-krishna-yXmjBxvkoG4-unsplash.jpg'),
+    car5: require('./images/joey-banks-YApiWyp0lqo-unsplash.jpg'),
+    car6: require('./images/kahl-orr-E36kvVnjOBk-unsplash.jpg'),
+    car7: require('./images/olav-tvedt-6lSBynPRaAQ-unsplash.jpg'),
+    car8: require('./images/tim-meyer-AsT9Dt11FkA-unsplash.jpg'),
+    car9: require('./images/toni-zaat-bKqNW5Dq6p8-unsplash.jpg')
+  }
+
   const size = {
     glass:{width: '10%', height: '10%'},
     restaurnt:{width:'13%', height:'13%'},
@@ -84,7 +97,10 @@ function App() {
 
       <Soldier sedeName='great elemental unit' idBattalion='55452553365' cantSoldiers='2.5000'/>
 
-      <Gallery style={size.restaurnt} image1={photo.barber} image2={photo.barber} image3={photo.barber} image4={photo.barber} image5={photo.barber} image6={photo.barber} image7={photo.barber} image8={photo.barber} image9={photo.barber}/>
+      <Gallery style={size.restaurnt} image1={cars.car1} image2={cars.car2} image3={cars.car3} image4={cars.car4} image5={cars.car5} image6={cars.car6} image7={cars.car7} image8={cars.car8} image9={cars.car9}/>
+    
+      <HotelReser nameReserv='Pancho Perez' rooms='3 rooms' people='6 people' days='5 days'/>
+
     </div>
   );
 }
