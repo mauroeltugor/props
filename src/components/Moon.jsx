@@ -1,7 +1,8 @@
-const Moons = (moon1,moon2,moon3,moon4,moon5,moon6,style) => {
+const Moons = ({moon1,moon2,moon3,moon4,moon5,moon6,style}) => {
     return(
         <div>
-            <div>
+            <h1>upper moons</h1>
+            <div className="demon">
                 <div>
                     <h1>Kokushibo </h1>
                     <img style={style} src={moon1} />
@@ -27,6 +28,7 @@ const Moons = (moon1,moon2,moon3,moon4,moon5,moon6,style) => {
                     <img style={style} src={moon6} />
                 </div>
             </div>
+            <hr />
         </div>
     )
 }

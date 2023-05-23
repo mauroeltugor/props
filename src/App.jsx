@@ -23,6 +23,13 @@ import Vape from './components/vapeStore';
 import Cv from './components/Cv';
 import Kages from './components/Naruto';
 import Moons from './components/Moon';
+import Food from './components/Food';
+import Pilar from './components/Pilar';
+import Gym from './components/Gym';
+import Coctel from './components/Coctel';
+import Map from './components/Maps';
+import Software from './components/Software';
+
 import './App.css';
 
 function App() {
@@ -41,8 +48,21 @@ function App() {
     tapita:require('./images/tapita.jpg'),
     onion: require('./images/onion.jfif'),
     vape: require('./images/vape.jfif'),
-    developer: require('./images/FOTO-MAURICIO-CELIS.jpg')
+    developer: require('./images/FOTO-MAURICIO-CELIS.jpg'),
+    food: require('./images/food.jpeg'),
+    imc: require('./images/tabla-IMC-624x411.webp'),
+    ron: require('./images/freecuba.webp'),
+    daikiri: require('./images/daikiri.jpeg'),
+    mojito: require('./images/mojito.jpg'),
+    map: require('./images/maps.jpeg')
   };
+
+  const pillars = {
+    rock: require('./images/rock.webp'),
+    fire: require('./images/fire.webp'),
+    love: require('./images/love.webp'),
+    wind: require('./images/wind.webp')
+  }
 
   const kages = {
     hokage: require('./images/hoka.jfif'),
@@ -64,7 +84,7 @@ function App() {
     car9: require('./images/toni-zaat-bKqNW5Dq6p8-unsplash.jpg')
   }
 
-  const moon = {
+  const moons = {
     moon1: require('./images/kokushibo.jfif'),
     moon2: require('./images/Doma.jfif'),
     moon3: require('./images/Akaza.jfif'),
@@ -80,8 +100,9 @@ function App() {
     bogota:{width: '54%',height: '50%',paddingBottom:'10%',paddingTop: '2%'},
     pc:{height:'77%', width:'30%'},
     field:{display:'flex',textAlign:'center',alignItems:'center',justifyContent:'space-between', padding:'0 20%'},
-    naruto:{width:'53%'}
+    naruto:{width:'53%', height:'62%'}
   }/**Product */
+  
   const number1 = 1512;/** Calculator*/
   const number2 = 23165;/** Calculator*/
   const age = 18;/**Age*/
@@ -143,7 +164,20 @@ function App() {
 
       <Kages hokage={kages.hokage} kazekage={kages.kazekage} mizukage={kages.mizukage} tsuchikage={kages.tsuchikage} raikage={kages.raikage} style={size.naruto}  />
 
-      <Moons moon1={moon.moon1} moon2={moon.moon2} moon3={moon.moon3} moon4={moon.moon4} moon5={moon.moon5} moon6={moon.moon6}  />
+      <Moons moon1={moons.moon1} moon2={moons.moon2} moon3={moons.moon3} moon4={moons.moon4} moon5={moons.moon5} moon6={moons.moon6}/>
+
+      <Food image={photo.food} question='What is it?'/>
+
+      <Gym height={1.80} weight={83} image={photo.imc}/>
+
+      <Pilar rock={pillars.rock} love={pillars.love} wind={pillars.wind} fire={pillars.fire} style={size.naruto}/>
+
+      <Coctel mojito={photo.mojito} daikiri={photo.daikiri} freeCuba={photo.ron} style={size.restaurnt}/>
+
+      <Map image={photo.map} tittle='The Cathedral of Murcia' />
+
+      <Software career1='Software Engineering' career2='Data Science' career3='Mobile App Development' career4='Cybersecurity' career5='Software Architecture'/>
+      
     </div>
   );
 }

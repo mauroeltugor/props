@@ -137,6 +137,44 @@ ul{
   padding-left: 10%;
 }
 
+.demon{
+  display: flex;
+  justify-content: space-around;
+}
+
+.food{
+  display: flex;
+  justify-content: space-around;
+  padding: 5% 10%;
+  align-items: center;
+}
+
+.infoFood{
+  width: 50%;
+}
+
+
+.imcDirect{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.drinks{
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+
+.infoDrink{
+  width: 100%;
+}
+
+
+
+
+
 
 
 
